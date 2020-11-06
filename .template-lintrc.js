@@ -1,5 +1,11 @@
+// .template-lintrc.js
 'use strict';
 
 module.exports = {
-  extends: 'octane'
+  extends: 'octane',
+  rules: {
+    'no-implicit-this': {
+      allow: ['_'] // required by ember-set-helper
+    },
+  }
 };
