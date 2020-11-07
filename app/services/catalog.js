@@ -22,7 +22,6 @@ export default class CatalogService extends Service {
     }
 
     async fetchAll(type) {
-        debugger;
         if (type === 'bands') {
             let response = await fetch('/bands');
             let json = await response.json();
@@ -98,7 +97,6 @@ export default class CatalogService extends Service {
     }
 
     async update(type, record, attributes) {
-        debugger;
         let payload = {
             data: {
                 id: record.id,
