@@ -9,6 +9,6 @@ export default class Band {
         this.id = id;
         this.name = name;
         this.songs = songs ?? [];
-            this.relationships = relationships;
+        this.relationships = relationships;
     }
 }

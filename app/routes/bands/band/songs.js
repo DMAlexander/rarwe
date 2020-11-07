@@ -6,6 +6,7 @@ export default class BandsBandSongsRoute extends Route {
   @service catalog;
 
   async model() {
+    debugger;
     let band = this.modelFor('bands.band');
     await this.catalog.fetchRelated(band, 'songs');
     return band;
