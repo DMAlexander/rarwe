@@ -6,6 +6,8 @@ export default class BandsBandRoute extends Route {
   @service catalog;
 
   model(params) {
-    return this.catalog.find('band', band => band.id === params.id);
+ //   return this.catalog.find('band', band => band.id === params.id);
+    let bands = this.modelFor('bands');
+    return bands.find(band => band.slug === params.slug);
   }
 }

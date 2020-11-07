@@ -1,9 +1,4 @@
 {{!-- app/components/star-rating.hbs --}}
 {{#each this.stars as |star|}}
-  <button type='button' {{on 'click' (fn @onUpdate star.rating)}}>
-    <FaIcon
-      @icon='star'
-      @prefix={{if star.full 'fas' 'far'}}
-    />
-  </button>
+  {{if star.full 'X' 'O'}}
 {{/each}}
